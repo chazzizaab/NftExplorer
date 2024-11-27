@@ -363,7 +363,7 @@ button:hover {
     footer {
         flex-direction: column; /* Вертикальное расположение для футера */
         align-items: center;
-        padding: 10px 0;
+        padding: 20px;
     }
 
     .footer-text {
