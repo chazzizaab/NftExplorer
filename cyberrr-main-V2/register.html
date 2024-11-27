@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/register.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>NFT Explorer</title>
+</head>
+<body>
+    <header>
+      <div class="header-content">
+          <a href="main.html" class="header-text">NFT</a>
+      </div>
+      <div class="user-actions">
+       <a href="#" class="user-icon" id="user-icon"><i class="fas fa-user"></i></a>
+       <div class="dropdown-menu" id="dropdown-menu">
+           <ul>
+               <li><a href="register.html">Мой профиль</a></li>
+               <li><a href="information.html">Информация</a></li>
+               <li><a href="links.html">Ссылки</a></li>
+               <li><a href="questions.html">Опрос</a></li>
+           </ul>
+       </div>
+   </div>
+    </header>
+    <!-- Выбор между входом и регистрацией -->
+    <div id="choice-form" style="display: none;">
+        <button id="login-button">Login</button>
+        <button id="register-button">Register</button>
+    </div>
+
+    <!-- Форма входа -->
+    <div id="login-form" style="display: none;">
+      <button class="close-button">close</button>
+        <form id="login-form-submit">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="login-email" required>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="login-password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <!-- Форма регистрации -->
+    <div id="registration-form" style="display: none;">
+      <button class="close-button">close</button>
+        <form id="registration-form-submit">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <noscript>
+        <div class="noscript-message">
+            <p>Ваш браузер не поддерживает JavaScript или JavaScript отключен. Для полноценной работы сайта включите JavaScript.</p>
+        </div>
+    </noscript>
+
+    <footer>
+            <div class="social-icons">
+                <a href="https://t.me/MagicaPony" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://vk.com/dragonoidvboy" target="_blank"><i class="fab fa-vk"></i></a>
+                <a href="https://youtu.be/yhHBPNZgUSE?si=o8YD6yiEdOleuyjH" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://tiktok.com/@once_music_live" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="footer-text">
+                &copy; 2024 NFT Explorer. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms_of_use.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>
