@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/stab.css" rel="stylesheet" type="text/css" />
+    <title>NFT Explorer</title>
+    <script>
+        // Проверяем ширину экрана
+        if (window.innerWidth <= 768) { // Считаем устройством мобильным при ширине <= 768px
+            window.location.href = "main.html"; // Перенаправление на другую страницу
+        }
+    </script>
+</head>
+<body>
+    <div class="hover-text">
+        <span class="main-text">Change your mind</span>
+        <span class="hover-text-content"><a href="main.html">JOIN US</a></span>
+    </div>
+    <noscript>
+        <div class="noscript-message">
+            <p>Ваш браузер не поддерживает JavaScript или JavaScript отключен. Для полноценной работы сайта включите JavaScript.</p>
+        </div>
+    </noscript>
+
+    <script src="js/register.js"></script>
+</body>
+</html>
