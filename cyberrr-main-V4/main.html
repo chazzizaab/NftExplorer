@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>NFT Explorer</title>
+</head>
+<body>
+    <header>
+      <div class="header-content">
+          <a href="main.html" class="header-text">NFT</a>
+      </div>
+      <div class="user-actions">
+       <a href="#" class="user-icon" id="user-icon"><i class="fas fa-user"></i></a>
+       <div class="dropdown-menu" id="dropdown-menu">
+           <ul>
+               <li><a href="register.html">Мой профиль</a></li>
+               <li><a href="information.html">Информация</a></li>
+               <li><a href="links.html">Ссылки</a></li>
+               <li><a href="questions.html">Опрос</a></li>
+           </ul>
+       </div>
+   </div>
+    </header>
+    <main>
+    <section class="nft-intro">
+        <h1>Добро пожаловать в мир NFT</h1>
+        <p>Исследуйте уникальный цифровой контент и коллекционные токены. В этом пространстве искусство встречается с технологией.</p>
+        <button class="explore-btn" onclick="window.location.href='information.html';">Узнать больше</button>
+    </section>
+
+    <section class="nft-showcase">
+        <h2>Погрузитесь в уникальные коллекции</h2>
+        <div class="showcase-gallery">
+            <div class="showcase-item">
+              <a href="https://opensea.io/collection/cryptopunks" target="_blank">
+                  <img src="images/nft1.jpg" alt="NFT Art 1">
+              </a>
+                <p>CryptoPunk #5822</p>
+            </div>
+            <div class="showcase-item">
+              <a href="https://opensea.io/collection/boredapeyachtclub" target="_blank">
+                  <img src="images/nft2.jpg" alt="NFT Art 2">
+              </a>
+                <p>Bored Ape #9832</p>
+            </div>
+            <div class="showcase-item">
+              <a href="https://opensea.io/collection/azuki" target="_blank">
+                  <img src="images/nft3.jpg" alt="NFT Art 3">
+              </a>
+                <p>Azuki #7680</p>
+            </div>
+            <div class="showcase-item">
+              <a href="https://opensea.io/collection/clonex" target="_blank">
+                  <img src="images/nft4.jpg" alt="NFT Art 4">
+              </a>
+                <p>CloneX #2028</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="nft-cards">
+            <h2>Чем примечательны NFT?</h2>
+            <div class="card-container">
+                <div class="info-card">
+                    <h3>Искусство</h3>
+                    <p>Наслаждайтесь уникальными произведениями усства от цифровых художников всего мира.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Уникальность</h3>
+                    <p>Каждый токен уникален и подтверждается через блокчейн.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Будущее</h3>
+                    <p>NFT – это мост между искусством и технологиями, формирующий новые горизонты.</p>
+                </div>
+            </div>
+        </section>
+</main>
+
+
+    <noscript>
+        <div class="noscript-message">
+            <p>Ваш браузер не поддерживает JavaScript или JavaScript отключен. Для полноценной работы сайта включите JavaScript.</p>
+        </div>
+    </noscript>
+
+    <footer>
+            <div class="social-icons">
+              <a href="https://t.me/MagicaPony" target="_blank"><i class="fab fa-telegram"></i></a>
+              <a href="https://vk.com/dragonoidvboy" target="_blank"><i class="fab fa-vk"></i></a>
+              <a href="https://youtu.be/yhHBPNZgUSE?si=o8YD6yiEdOleuyjH" target="_blank"><i class="fab fa-youtube"></i></a>
+              <a href="https://tiktok.com/@once_music_live" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="footer-text">
+                &copy; 2024 NFT Explorer. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms_of_use.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>
