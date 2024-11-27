@@ -164,6 +164,100 @@ header {
     background-color: rgba(188, 19, 254, 0.2); /* Полупрозрачный фиолетовый на hover */
     color: #fff; /* Белый цвет при наведении */
 }
+/* Платформы */
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 1; /* Чтобы было выше видеофона */
+    padding-bottom: 90px; /* Увеличиваем нижний отступ, чтобы контент не скрывался под футером */
+}
+
+.platform-card {
+    background: rgba(26, 26, 46, 0.9); /* Полупрозрачный фон */
+    border: 2px solid #bc13fe; /* Неоновая рамка */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(188, 19, 254, 0.5), 0 0 40px rgba(188, 19, 254, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.platform-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(188, 19, 254, 0.8), 0 0 60px rgba(188, 19, 254, 0.6);
+}
+
+.platform-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(188, 19, 254, 0.5);
+}
+
+.platform-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #bc13fe;
+    text-shadow: 0 0 10px rgba(188, 19, 254, 0.8);
+}
+
+.platform-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #c2c2c2;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #6a11cb;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: 'Krypton', sans-serif;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.btn:hover {
+    background-color: #2575fc;
+    color: #ffffff;
+    border-color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+    cursor: url('../images/cursor_2.png'), auto; /* Кастомный курсор на кнопке */
+}
+.noscript-message {
+  background-color: #f8d7da; /* Красный фон для предупреждения */
+  color: #721c24; /* Темно-красный цвет текста */
+  padding: 20px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin: 20px 0;
+}
+a:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+button:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+.custom-element:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
 
 footer {
     position: relative;
@@ -237,100 +331,7 @@ footer::before {
 .footer-text a:hover {
     text-decoration: underline;
 }
-/* Платформы */
-.platform-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    z-index: 1; /* Чтобы было выше видеофона */
-    padding-bottom: 90px; /* Увеличиваем нижний отступ, чтобы контент не скрывался под футером */
-}
 
-.platform-card {
-    background: rgba(26, 26, 46, 0.9); /* Полупрозрачный фон */
-    border: 2px solid #bc13fe; /* Неоновая рамка */
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(188, 19, 254, 0.5), 0 0 40px rgba(188, 19, 254, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #ffffff;
-    overflow: hidden;
-}
-
-.platform-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 30px rgba(188, 19, 254, 0.8), 0 0 60px rgba(188, 19, 254, 0.6);
-}
-
-.platform-card img {
-    width: 100%;
-    height: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: 1px solid rgba(188, 19, 254, 0.5);
-}
-
-.platform-card h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #bc13fe;
-    text-shadow: 0 0 10px rgba(188, 19, 254, 0.8);
-}
-
-.platform-card p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #c2c2c2;
-}
-
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    background-color: #6a11cb;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    font-family: 'Krypton', sans-serif;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-
-.btn:hover {
-    background-color: #2575fc;
-    color: #ffffff;
-    border-color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    transform: scale(1.1);
-    cursor: url('../images/cursor_2.png'), auto; /* Кастомный курсор на кнопке */
-}
-.noscript-message {
-  background-color: #f8d7da; /* Красный фон для предупреждения */
-  color: #721c24; /* Темно-красный цвет текста */
-  padding: 20px;
-  border: 1px solid #f5c6cb;
-  border-radius: 5px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-  margin: 20px 0;
-}
-a:hover {
-    cursor: url('../images/cursor_2.png'), auto;
-}
-button:hover {
-    cursor: url('../images/cursor_2.png'), auto;
-}
-.custom-element:hover {
-    cursor: url('../images/cursor_2.png'), auto;
-}
 /* Mobile Responsive */
 @media (max-width: 768px) {
 
