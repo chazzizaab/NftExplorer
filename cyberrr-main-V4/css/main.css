@@ -411,10 +411,6 @@ button:hover {
 }
 /* Общие настройки для мобильных устройств */
 @media (max-width: 768px) {
-    body {
-      overflow-x: hidden;
-    }
-
     header {
         flex-direction: column; /* Меняем структуру на вертикальную */
         padding: 15px 10px;
