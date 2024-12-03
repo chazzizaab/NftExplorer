@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'Krypton';
+    src: url('../fonts/Krypton.woff2') format('woff2'),
+         url('../fonts/Krypton.woff') format('woff'),
+         url('../fonts/Krypton.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 60px #0fa,
+        0 0 70px #0fa,
+        0 0 0px #0fa,
+        0 0 0px #0fa;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+@keyframes flicker1 {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+        0 0 4px #f80000,
+        0 0 11px #f80000,
+        0 0 19px #f80000,
+        0 0 40px #ff073a,
+        0 0 60px #ff073a,
+        0 0 70px #ff073a,
+        0 0 0px #ff073a,
+        0 0 0px #ff073a;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+@keyframes pulsate {
+    100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #bc13fe,
+        0 0 80px #bc13fe,
+        0 0 90px #bc13fe,
+        0 0 100px #bc13fe,
+        0 0 150px #bc13fe;
+    }
+    0% {
+        text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px #fff,
+        0 0 10px #bc13fe,
+        0 0 45px #bc13fe,
+        0 0 55px #bc13fe,
+        0 0 70px #bc13fe,
+        0 0 80px #bc13fe;
+    }
+}
+
+body, html {
+    cursor: url('../images/cursor_1.png'), auto; /* Пользовательский курсор с изображением */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/bckgrd.jpg'); /* Путь к вашей картинке */
+    background-color: rgba(0, 0, 0, 0.5); /* Добавляет полупрозрачный черный слой */
+    background-blend-mode: darken; /* Затемняет фон */
+    background-repeat: no-repeat; /* Отключает повторение изображения */
+    background-size: cover; /* Изображение масштабируется, чтобы покрыть весь фон */
+    background-position: center; /* Центрирует изображение на странице */
+    background-attachment: fixed; /* Фон остаётся неподвижным при прокрутке */
+}
+
+
+.hover-text {
+    position: relative;
+    display: inline-block;
+    user-select: none; /* Запрещает выделение текста */
+    -webkit-user-select: none; /* Для поддержки Safari и Chrome */
+    -moz-user-select: none; /* Для поддержки Firefox */
+    -ms-user-select: none; /* Для поддержки Internet Explorer/Edge */
+    text-align: center;
+    font-family: 'Krypton', sans-serif;
+}
+
+.main-text {
+    animation: flicker 3.0s infinite alternate;
+    cursor: pointer;
+    color: #fff;
+    font-size: 64px;
+    position: relative;
+}
+
+.hover-text-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 64px;
+    opacity: 0;
+    color: #f80000;
+    animation: flicker1 3.0s infinite alternate;
+    transition: opacity 2.5s ease-in-out;
+}
+
+.hover-text-content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hover-text:hover .main-text {
+    opacity: 0;
+}
+
+.hover-text:hover .hover-text-content {
+    opacity: 1;
+}
+a:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+button:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+.custom-element:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+.noscript-message {
+  background-color: #f8d7da; /* Красный фон для предупреждения */
+  color: #721c24; /* Темно-красный цвет текста */
+  padding: 20px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin: 20px 0;
+}
