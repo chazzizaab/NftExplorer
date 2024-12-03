@@ -1,0 +1,289 @@
+@font-face {
+    font-family: 'Krypton';
+    src: url('../fonts/Krypton.woff2') format('woff2'),
+         url('../fonts/Krypton.woff') format('woff'),
+         url('../fonts/Krypton.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SFT';
+    src: url('../fonts/sft-schrifted-serif-15.woff2') format('woff2'),
+         url('../fonts/sft-schrifted-serif-15.woff') format('woff'),
+         url('../fonts/sft-schrifted-serif-15.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    cursor: url('../images/cursor_1.png'), auto; /* Пользовательский курсор с изображением */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-family: 'Krypton', sans-serif;
+    background-image: url('../images/bckgrd.jpg'); /* Путь к вашей картинке */
+    background-color: rgba(0, 0, 0, 0.5); /* Добавляет полупрозрачный черный слой */
+    background-blend-mode: darken; /* Затемняет фон */
+    background-repeat: no-repeat; /* Отключает повторение изображения */
+    background-size: cover; /* Изображение масштабируется, чтобы покрыть весь фон */
+    background-position: center; /* Центрирует изображение на странице */
+    background-attachment: fixed; /* Фон остаётся неподвижным при прокрутке */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #1a1a2e;
+    color: #bc13fe;
+    text-shadow: 0 0 10px #bc13fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Krypton', sans-serif;
+    text-align: center;
+    border-bottom: 2px solid #bc13fe;
+    z-index: 1000;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.header-text {
+    color: #bc13fe;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Krypton', sans-serif;
+}
+
+.user-actions {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1010;
+}
+
+.user-icon {
+    color: #bc13fe;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+.dropdown-menu {
+    background-color: rgba(26, 26, 46, 0.9) !important;/* Темный фон, как у всего сайта */
+    color: #bc13fe; /* Фиолетовый цвет, как на сайте */
+    border-radius: 10px !important;
+    box-shadow: 0 0 20px rgba(188, 19, 254, 1), 0 0 60px rgba(188, 19, 254, 0.4) !important; /* Неоновая фиолетовая тень */
+    width: 220px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(10px); /* Эффект плавного появления */
+}
+
+.dropdown-menu.show {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    padding: 15px 20px;
+    border-bottom: 2px solid #bc13fe; /* Фиолетовая линия раздела */
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    color: #bc13fe; /* Сохранение фиолетового цвета для ссылок */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Krypton', sans-serif;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(188, 19, 254, 0.2); /* Полупрозрачный фиолетовый на hover */
+    color: #fff; /* Белый цвет при наведении */
+}
+.quiz-container {
+    background-color: rgba(26, 26, 46, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #bc13fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe;
+    margin: 0 auto; /* Центрирование контейнера */
+}
+
+#question-text {
+    color: #fff; /* Неоновый цвет */
+    text-shadow: 0 0 10px #bc13fe; /* Неоновый эффект */
+    font-family: 'STF', sans-serif;
+    margin-bottom: 20px; /* Отступ снизу для вопроса */
+}
+#restart-button {
+    font-family: 'STF', sans-serif;
+    background-color: #bc13fe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#restart-button:hover {
+    background-color: #9a0dcc;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.answer-button {
+    font-family: 'STF', sans-serif;
+    background-color: #bc13fe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.answer-button:hover {
+    background-color: #9a0dcc;
+}
+
+#result-container {
+    color: #fff; /* Неоновый цвет */
+    text-shadow: 0 0 10px #bc13fe; /* Неоновый эффект */
+    font-family: 'STF', sans-serif;
+    margin-top: 20px;
+    background-color: rgba(26, 26, 46, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Скрыто по умолчанию */
+}
+
+#result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#result-table th, #result-table td {
+    border: 1px solid #bc13fe;
+    padding: 10px;
+    text-align: center;
+}
+
+#result-table th {
+    background-color: rgba(188, 19, 254, 0.2);
+    color: #fff;
+}
+
+#result-table td {
+    background-color: rgba(26, 26, 46, 0.6);
+    color: #fff;
+}
+footer{
+  bottom: 0 !important;
+  left: 0 !important;
+  position: fixed !important;
+}
+
+.noscript-message {
+  background-color: #f8d7da; /* Красный фон для предупреждения */
+  color: #721c24; /* Темно-красный цвет текста */
+  padding: 20px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin: 20px 0;
+}
+a:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+button:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+.custom-element:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .quiz-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .user-actions {
+        position: fixed;  /* Делаем фиксированным для мобильных */
+        top: 10px; /* Располагаем иконку в верхней части экрана */
+        right: 30px; /* Отступ с правой стороны */
+        transform: translateY(-13%);
+    }
+
+    footer {
+        flex-direction: column; /* Вертикальное расположение для футера */
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .footer-text {
+        margin: 10px 0;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+}

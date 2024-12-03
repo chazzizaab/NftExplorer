@@ -1,0 +1,330 @@
+@font-face {
+    font-family: 'Krypton';
+    src: url('../fonts/Krypton.woff2') format('woff2'),
+         url('../fonts/Krypton.woff') format('woff'),
+         url('../fonts/Krypton.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    cursor: url('../images/cursor_1.png'), auto; /* Пользовательский курсор с изображением */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    font-family: 'Krypton', sans-serif;
+    background-image: url('../images/bckgrd.jpg'); /* Путь к вашей картинке */
+    background-color: rgba(0, 0, 0, 0.5); /* Добавляет полупрозрачный черный слой */
+    background-blend-mode: darken; /* Затемняет фон */
+    background-repeat: no-repeat; /* Отключает повторение изображения */
+    background-size: cover; /* Изображение масштабируется, чтобы покрыть весь фон */
+    background-position: center; /* Центрирует изображение на странице */
+    background-attachment: fixed; /* Фон остаётся неподвижным при прокрутке */
+  }
+  main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      color: #bc13fe;
+      font-family: 'Krypton', sans-serif;
+      height: calc(100vh - 85px); /* Учитываем высоту header и footer */
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+      scrollbar-width: none;
+  }
+
+  main::-webkit-scrollbar {
+      display: none;
+  }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #1a1a2e;
+    color: #bc13fe;
+    text-shadow: 0 0 10px #bc13fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Krypton', sans-serif;
+    border-bottom: 2px solid #bc13fe;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.header-text {
+    color: #bc13fe;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Krypton', sans-serif;
+}
+
+.user-actions {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1010;
+}
+
+.user-icon {
+    color: #bc13fe;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+.dropdown-menu {
+    background-color: rgba(26, 26, 46, 0.9) !important;/* Темный фон, как у всего сайта */
+    color: #bc13fe; /* Фиолетовый цвет, как на сайте */
+    border-radius: 10px !important;
+    box-shadow: 0 0 20px rgba(188, 19, 254, 1), 0 0 60px rgba(188, 19, 254, 0.4) !important; /* Неоновая фиолетовая тень */
+    width: 220px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(10px); /* Эффект плавного появления */
+    z-index: 1050;
+}
+
+.dropdown-menu.show {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    padding: 15px 20px;
+    border-bottom: 2px solid #bc13fe; /* Фиолетовая линия раздела */
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    color: #bc13fe; /* Сохранение фиолетового цвета для ссылок */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Krypton', sans-serif;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(188, 19, 254, 0.2); /* Полупрозрачный фиолетовый на hover */
+    color: #fff; /* Белый цвет при наведении */
+}
+
+.nft-intro, .nft-showcase, .nft-cards {
+    margin: 10px;
+    padding: 30px;
+    background: rgba(26, 26, 46, 0.8);
+    border-radius: 15px;
+    border: 2px solid #bc13fe;
+    max-width: 600px;
+    width: 100%;
+}
+
+.nft-intro h1, .nft-showcase h2, .nft-cards h2 {
+    color: #fff; /* Неоновый цвет */
+    text-shadow: 0 0 10px #bc13fe; /* Неоновый эффект */
+}
+
+.explore-btn {
+    background-color: #bc13fe;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-family: 'Krypton', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #9a0fcd;
+    transform: scale(1.05);
+}
+
+.nft-showcase {
+    padding: 15px;
+    width: 100%;
+    background: rgba(26, 26, 46, 0.8);
+    border-radius: 15px;
+    max-width: 900px;
+    margin-top: 20px;
+}
+.nft-showcase h2{
+  color: #fff; /* Неоновый цвет */
+  text-shadow: 0 0 10px #bc13fe; /* Неоновый эффект */
+}
+
+.showcase-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.showcase-item {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    width: 140px;
+    margin: 10px;
+}
+
+.showcase-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #bc13fe;
+}
+
+.showcase-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.nft-cards {
+    background: rgba(26, 26, 46, 0.8);
+    border-radius: 15px;
+    border: 2px solid #bc13fe;
+    padding: 15px;
+    max-width: 900px;
+    width: 100%;
+    margin-top: 20px;
+}
+.nft-cards h2{
+  color: #fff; /* Неоновый цвет */
+  text-shadow: 0 0 10px #bc13fe; /* Неоновый эффект */
+}
+
+.card-container {
+
+    display: flex;
+    flex-direction: row; /* Ряд по умолчанию */
+    justify-content: center; /* Центрируем элементы */
+    gap: 20px; /* Промежутки между карточками */
+}
+
+.info-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    color: #bc13fe;
+    flex: 1 1 250px; /* Карточка будет занимать минимум 250px, но сжиматься и расширяться при необходимости */
+    max-width: 300px; /* Ограничение максимальной ширины */
+    width: 100%; /* Устанавливаем ширину на 100% */
+    padding: 15px; /* Добавляем отступы внутри карточки */
+    margin: 10px; /* Добавляем отступы снаружи карточки */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #bc13fe;
+}
+
+.info-card h3 {
+    margin-bottom: 6px;
+    color: #fff;
+}
+
+.noscript-message {
+  background-color: #f8d7da; /* Красный фон для предупреждения */
+  color: #721c24; /* Темно-красный цвет текста */
+  padding: 20px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin: 20px 0;
+
+}
+a:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+button:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+.custom-element:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+/* Общие настройки для мобильных устройств */
+@media (max-width: 768px) {
+    .user-actions {
+        position: fixed;  /* Делаем фиксированным для мобильных */
+        top: 10px; /* Располагаем иконку в верхней части экрана */
+        right: 30px; /* Отступ с правой стороны */
+        transform: translateY(-13%);
+    }
+
+    .nft-intro{
+      margin-top: 20px;
+    }
+    .nft-showcase, .nft-cards {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    /* Центрирование изображений в .showcase-gallery */
+    .showcase-gallery {
+        display: flex;
+        justify-content: center; /* Центрируем по горизонтали */
+        align-items: center; /* Центрируем по вертикали */
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .showcase-item {
+        width: 100%;
+        max-width: 100%; /* Убираем ограничения по ширине */
+        margin: 10px;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: center; /* Центрируем по горизонтали */
+        align-items: center; /* Центрируем по вертикали */
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+
+    .info-card {
+        width: 100%; /* Занимает всю ширину контейнера */
+        max-width: 300px; /* Ограничение максимальной ширины */
+    }
+}
