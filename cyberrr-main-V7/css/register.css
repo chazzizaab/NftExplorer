@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'Krypton';
+    src: url('../fonts/Krypton.woff2') format('woff2'),
+         url('../fonts/Krypton.woff') format('woff'),
+         url('../fonts/Krypton.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    cursor: url('../images/cursor_1.png'), auto; /* Пользовательский курсор с изображением */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/bckgrd.jpg'); /* Путь к вашей картинке */
+    background-color: rgba(0, 0, 0, 0.5); /* Добавляет полупрозрачный черный слой */
+    background-blend-mode: darken; /* Затемняет фон */
+    background-repeat: no-repeat; /* Отключает повторение изображения */
+    background-size: cover; /* Изображение масштабируется, чтобы покрыть весь фон */
+    background-position: center; /* Центрирует изображение на странице */
+    background-attachment: fixed; /* Фон остаётся неподвижным при прокрутке */
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: #bc13fe;
+    font-family: 'Krypton', sans-serif;
+    height: calc(100vh - 85px); /* Учитываем высоту header и footer */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #bc13fe; /* Добавляем разделительную линию */
+    padding-bottom: 10px; /* Добавляем отступ снизу */
+    background-color: rgba(26, 26, 46, 0.8); /* Фон для вкладок */
+    border-radius: 8px 8px 0 0; /* Скругление верхних углов */
+    padding: 10px;
+}
+
+.tab-link {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 0 0 10px #bc13fe;
+    border-bottom: 2px solid transparent; /* Добавляем подчеркивание для активной вкладки */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-link.active {
+    background-color: #bc13fe;
+    color: #fff;
+    text-shadow: 0 0 10px #bc13fe;
+    border-radius: 8px 8px 0 0; /* Скругление верхних углов для активной вкладки */
+}
+
+.tab-link:hover {
+    background-color: rgba(188, 19, 254, 0.2);
+    color: #fff;
+    text-shadow: 0 0 10px #bc13fe;
+    cursor: url('../images/cursor_2.png'), auto;
+}
+
+.container {
+    background-color: rgba(26, 26, 46, 0.8);
+    padding: 20px;
+    border-radius: 0 0 8px 8px; /* Скругление нижних углов */
+    box-shadow: 0 0 10px rgba(188, 19, 254, 0.5);
+    width: 300px;
+    margin-top: 80px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+#loginMessage, #registerMessage{
+  margin: 8px;
+  color: #fff; /* Неоновый цвет */
+  text-shadow: 0 0 10px #bc13fe; /* Неоновый эффект */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #bc13fe;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #bc13fe;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: url('../images/cursor_2.png'), auto;
+}
+
+button:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+    background-color: #9a0fcd;
+    transform: scale(1.05);
+    cursor: url('../images/cursor_2.png'), auto;
+}
+
+p {
+    margin-top: 10px;
+    color: #333;
+}
+
+a:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+
+.custom-element:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+footer{
+  bottom: 0 !important;
+  left: 0 !important;
+  position: fixed !important;
+}

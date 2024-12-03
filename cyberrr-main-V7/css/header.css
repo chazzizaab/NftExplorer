@@ -1,0 +1,110 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #1a1a2e;
+    color: #bc13fe;
+    text-shadow: 0 0 10px #bc13fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Krypton', sans-serif;
+    text-align: center;
+    border-bottom: 2px solid #bc13fe;
+    z-index: 1000;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.header-text {
+    color: #bc13fe;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Krypton', sans-serif;
+}
+
+.user-actions {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1010;
+}
+
+.user-icon {
+    color: #bc13fe;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+.dropdown-menu {
+    background-color: rgba(26, 26, 46, 0.9) !important;/* Темный фон, как у всего сайта */
+    color: #bc13fe; /* Фиолетовый цвет, как на сайте */
+    border-radius: 10px !important;
+    box-shadow: 0 0 20px rgba(188, 19, 254, 1), 0 0 60px rgba(188, 19, 254, 0.4) !important; /* Неоновая фиолетовая тень */
+    width: 220px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(10px); /* Эффект плавного появления */
+}
+
+.dropdown-menu.show {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    padding: 15px 20px;
+    border-bottom: 2px solid #bc13fe; /* Фиолетовая линия раздела */
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    color: #bc13fe; /* Сохранение фиолетового цвета для ссылок */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Krypton', sans-serif;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(188, 19, 254, 0.2); /* Полупрозрачный фиолетовый на hover */
+    color: #fff; /* Белый цвет при наведении */
+}
+@media (max-width: 768px) {
+    .user-actions {
+        position: fixed;  /* Делаем фиксированным для мобильных */
+        top: 10px; /* Располагаем иконку в верхней части экрана */
+        right: 30px; /* Отступ с правой стороны */
+        transform: translateY(-13%);
+    }
+}

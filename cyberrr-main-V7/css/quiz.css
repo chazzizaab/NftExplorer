@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Krypton';
+    src: url('../fonts/Krypton.woff2') format('woff2'),
+         url('../fonts/Krypton.woff') format('woff'),
+         url('../fonts/Krypton.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SFT';
+    src: url('../fonts/sft-schrifted-serif-15.woff2') format('woff2'),
+         url('../fonts/sft-schrifted-serif-15.woff') format('woff'),
+         url('../fonts/sft-schrifted-serif-15.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    cursor: url('../images/cursor_1.png'), auto; /* Пользовательский курсор с изображением */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-family: 'Krypton', sans-serif;
+    background-image: url('../images/bckgrd.jpg'); /* Путь к вашей картинке */
+    background-color: rgba(0, 0, 0, 0.5); /* Добавляет полупрозрачный черный слой */
+    background-blend-mode: darken; /* Затемняет фон */
+    background-repeat: no-repeat; /* Отключает повторение изображения */
+    background-size: cover; /* Изображение масштабируется, чтобы покрыть весь фон */
+    background-position: center; /* Центрирует изображение на странице */
+    background-attachment: fixed; /* Фон остаётся неподвижным при прокрутке */
+}
+
+.quiz-container {
+    background-color: rgba(26, 26, 46, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #bc13fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe;
+    margin: 0 auto; /* Центрирование контейнера */
+}
+
+#question-text {
+    color: #fff; /* Неоновый цвет */
+    text-shadow: 0 0 10px #bc13fe; /* Неоновый эффект */
+    font-family: 'STF', sans-serif;
+    margin-bottom: 20px; /* Отступ снизу для вопроса */
+}
+#restart-button {
+    font-family: 'STF', sans-serif;
+    background-color: #bc13fe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#restart-button:hover {
+    background-color: #9a0dcc;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.answer-button {
+    font-family: 'STF', sans-serif;
+    background-color: #bc13fe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.answer-button:hover {
+    background-color: #9a0dcc;
+}
+
+#result-container {
+    color: #fff; /* Неоновый цвет */
+    text-shadow: 0 0 10px #bc13fe; /* Неоновый эффект */
+    font-family: 'STF', sans-serif;
+    margin-top: 20px;
+    background-color: rgba(26, 26, 46, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Скрыто по умолчанию */
+}
+
+#result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#result-table th, #result-table td {
+    border: 1px solid #bc13fe;
+    padding: 10px;
+    text-align: center;
+}
+
+#result-table th {
+    background-color: rgba(188, 19, 254, 0.2);
+    color: #fff;
+}
+
+#result-table td {
+    background-color: rgba(26, 26, 46, 0.6);
+    color: #fff;
+}
+footer{
+  bottom: 0 !important;
+  left: 0 !important;
+  position: fixed !important;
+}
+
+.noscript-message {
+  background-color: #f8d7da; /* Красный фон для предупреждения */
+  color: #721c24; /* Темно-красный цвет текста */
+  padding: 20px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin: 20px 0;
+}
+a:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+button:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+.custom-element:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  main{
+    height: auto;
+  }
+    .quiz-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+}

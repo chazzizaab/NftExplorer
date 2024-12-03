@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Krypton';
+    src: url('../fonts/Krypton.woff2') format('woff2'),
+         url('../fonts/Krypton.woff') format('woff'),
+         url('../fonts/Krypton.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    cursor: url('../images/cursor_1.png'), auto; /* Пользовательский курсор с изображением */
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Разрешить вертикальный скроллинг */
+    font-family: 'Krypton', sans-serif;
+    user-select: none;
+    background-image: url('../images/bckgrd.jpg'); /* Путь к вашей картинке */
+    background-color: rgba(0, 0, 0, 0.5); /* Добавляет полупрозрачный черный слой */
+    background-blend-mode: darken; /* Затемняет фон */
+    background-repeat: no-repeat; /* Отключает повторение изображения */
+    background-size: cover; /* Изображение масштабируется, чтобы покрыть весь фон */
+    background-position: center; /* Центрирует изображение на странице */
+    background-attachment: fixed; /* Фон остаётся неподвижным при прокрутке */
+}
+
+main {
+    margin-top: 20px; /* Добавляем отступ сверху для контента, чтобы не перекрывать header */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: #bc13fe;
+    font-family: 'Krypton', sans-serif;
+    height: calc(100vh - 100px); /* Учитываем высоту header и footer */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Платформы */
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 1; /* Чтобы было выше видеофона */
+    padding-bottom: 90px; /* Увеличиваем нижний отступ, чтобы контент не скрывался под футером */
+}
+
+.platform-card {
+    background: rgba(26, 26, 46, 0.9); /* Полупрозрачный фон */
+    border: 2px solid #bc13fe; /* Неоновая рамка */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(188, 19, 254, 0.5), 0 0 40px rgba(188, 19, 254, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.platform-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(188, 19, 254, 0.8), 0 0 60px rgba(188, 19, 254, 0.6);
+}
+
+.platform-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(188, 19, 254, 0.5);
+}
+
+.platform-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #bc13fe;
+    text-shadow: 0 0 10px rgba(188, 19, 254, 0.8);
+}
+
+.platform-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #c2c2c2;
+}
+
+.btn {
+    display: inline-block !important;
+    text-decoration: none !important;
+    background-color: #6a11cb !important;
+    color: #ffffff !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    font-size: 1.1rem !important;
+    font-family: 'Krypton', sans-serif !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5) !important;
+}
+
+.btn:hover {
+    background-color: #2575fc;
+    color: #ffffff;
+    border-color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+    cursor: url('../images/cursor_2.png'), auto; /* Кастомный курсор на кнопке */
+}
+
+.noscript-message {
+  background-color: #f8d7da; /* Красный фон для предупреждения */
+  color: #721c24; /* Темно-красный цвет текста */
+  padding: 20px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin: 20px 0;
+}
+a:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+button:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+.custom-element:hover {
+    cursor: url('../images/cursor_2.png'), auto;
+}
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  main{
+    height: auto;
+  }
+  .platform-grid {
+      grid-template-columns: 1fr;
+      padding: 20px;
+  }
+
+  .platform-card {
+    margin-top: 20px;
+      margin-bottom: 10px;
+  }
+
+  .btn {
+      font-size: 1rem;
+      padding: 10px 15px;
+  }
+}

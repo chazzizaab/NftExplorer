@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/quiz.css" rel="stylesheet" type="text/css" />
+    <link href="css/footer.css" rel="stylesheet" type="text/css" />
+    <link href="css/header.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>NFT Explorer</title>
+</head>
+<body>
+  <header>
+      <div class="header-content">
+          <a href="main.html" class="header-text">NFT</a>
+      </div>
+      <div class="user-actions">
+          <div class="dropdown">
+              <a href="#" class="user-icon" id="user-icon" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user"></i></a>
+              <ul class="dropdown-menu" aria-labelledby="user-icon">
+                  <li><a class="dropdown-item" href="register.html">Мой профиль</a></li>
+                  <li><a class="dropdown-item" href="information.html">Информация</a></li>
+                  <li><a class="dropdown-item" href="links.html">Ссылки</a></li>
+                  <li><a class="dropdown-item" href="questions.html">Опрос</a></li>
+              </ul>
+          </div>
+      </div>
+  </header>
+    <div class="quiz-container">
+    <div id="question-container">
+        <h2 id="question-text">Загрузка вопроса...</h2>
+        <div id="answer-buttons" class="button-container">
+            <button class="answer-button" data-value="yes">Да</button>
+            <button class="answer-button" data-value="no">Нет</button>
+            <button class="answer-button" data-value="dont_know">Не знаю</button>
+        </div>
+    </div>
+    <div id="result-container" style="display: none;">
+        <h2>Результаты опроса:</h2>
+        <table id="result-table">
+            <tr>
+                <th>Ответ</th>
+                <th>Количество</th>
+            </tr>
+            <tr>
+                <td>Да</td>
+                <td><span id="yes-count">0</span></td>
+            </tr>
+            <tr>
+                <td>Нет</td>
+                <td><span id="no-count">0</span></td>
+            </tr>
+            <tr>
+                <td>Не знаю</td>
+                <td><span id="dont-know-count">0</span></td>
+            </tr>
+        </table>
+        <button id="restart-button">Пройти заново</button>
+    </div>
+</div>
+
+    <noscript>
+        <div class="noscript-message">
+            <p>Ваш браузер не поддерживает JavaScript или JavaScript отключен. Для полноценной работы сайта включите JavaScript.</p>
+        </div>
+    </noscript>
+
+    <footer>
+            <div class="social-icons">
+              <a href="https://t.me/MagicaPony" target="_blank"><i class="fab fa-telegram"></i></a>
+              <a href="https://vk.com/dragonoidvboy" target="_blank"><i class="fab fa-vk"></i></a>
+              <a href="https://youtu.be/yhHBPNZgUSE?si=o8YD6yiEdOleuyjH" target="_blank"><i class="fab fa-youtube"></i></a>
+              <a href="https://tiktok.com/@once_music_live" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="footer-text">
+                &copy; 2024 NFT Explorer. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms_of_use.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>
