@@ -82,7 +82,7 @@ main::-webkit-scrollbar {
     border-radius: 0 0 8px 8px; /* Скругление нижних углов */
     box-shadow: 0 0 10px rgba(188, 19, 254, 0.5);
     width: 300px;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .tab-content {
