@@ -148,8 +148,39 @@ a:hover {
 .custom-element:hover {
     cursor: url('../images/cursor_2.png'), auto;
 }
-footer{
-  bottom: 0 !important;
-  left: 0 !important;
-  position: fixed !important;
+
+@media (max-width: 768px) {
+  body {
+        display: flex;
+        flex-direction: column; /* Устанавливаем вертикальное выравнивание */
+        align-items: center;   /* Центрируем контент по горизонтали */
+    }
+
+    main {
+      height: auto;
+        width: 100%;           /* Занимаем всю ширину экрана */
+        max-width: 600px;      /* Ограничиваем ширину формы */
+        margin: 0 auto;        /* Центрируем форму */
+        padding-bottom: 80px;  /* Добавляем отступ снизу для футера */
+    }
+
+    footer {
+        position: static;      /* Убираем фиксированное позиционирование */
+        width: 100%;           /* Футер занимает всю ширину */
+        margin-top: 20px;      /* Добавляем отступ сверху */
+        text-align: center;    /* Центрируем текст */
+    }
+
+    .container {
+        width: 90%;            /* Уменьшаем ширину контейнера на мобильных устройствах */
+        margin: 0 auto;        /* Центрируем контейнер */
+    }
+
+    .social-icons {
+        justify-content: center; /* Центрируем иконки социальных сетей */
+        flex-wrap: wrap;         /* Разрешаем перенос строк */
+        margin: 10px 0;
+    }
+
 }
+
